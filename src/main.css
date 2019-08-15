@@ -95,13 +95,14 @@ li h2 {
 }
 
 .card-image {
-    height: 30%;
-    width: 30%;
+    height: 40%;
+    width: 40%;
 
 }
 .card-flex {
     display: flex;
     justify-content: space-around;
+    margin-top: 15px;
 }
 
 .text-flex {
@@ -125,10 +126,15 @@ p {
 
 @media only screen and (max-width: 650px) {
     .card-image {
-        height: 25%;
-        width: 25%;
+        height: 35%;
+        width: 35%;
     }
     main {
         grid-template-columns: 1fr;
+    }
+    .card-flex {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
     }
   }
