@@ -21,7 +21,7 @@ main {
     margin-top: 1%;
     margin-left: 1%;
     margin-bottom: 1%;
-    transform: rotate(1080deg);
+    transform: rotate(1800deg);
 }
 
 header{
@@ -56,6 +56,7 @@ header h1 {
     font-family: 'Orbitron', sans-serif;
     color: rgba(204, 0, 0, 0.733);
     font-weight: bolder;
+    font-size: 1.1em;
 }
 
 .sort-and-search-section select {
@@ -64,6 +65,7 @@ header h1 {
     font-family: 'Orbitron', sans-serif;
     color: rgba(204, 0, 0, 0.733);
     font-weight: bolder;
+    font-size: 1.05em;
 }
 
 .search-bar {
@@ -80,6 +82,11 @@ li {
     height: 200px;
     background: rgba(238, 238, 238, 0.801);
     border: 2px solid rgba(255, 255, 0, 0.822);
+    transition: all .2s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.1);
 }
 
 li h2 {
