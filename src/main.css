@@ -1,11 +1,12 @@
 main {
     display: grid;
     grid-template-columns: 1.5fr 4fr;
+    grid-gap: 20px;
 }
 
 .page-logo {
-    height: 12%;
-    width: 12%;
+    height: 5%;
+    width: 5%;
     opacity: 0.8;
     margin-top: 1%;
     margin-left: 1%;
@@ -14,8 +15,8 @@ main {
 }
 
 .page-logo:hover {
-    height: 12%;
-    width: 12%;
+    height: 8%;
+    width: 8%;
     opacity: 0.8;
     margin-top: 1%;
     margin-left: 1%;
@@ -28,12 +29,12 @@ header{
     justify-content: space-evenly;
     align-items: center;
     background: #3B4CCA;
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
 }
 
 header h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 5.5rem;
+    font-size: 4em;
     text-transform: lowercase;
     flex-grow: 1;
     margin-left: 2%;
@@ -46,6 +47,7 @@ header h1 {
     font-family: 'Orbitron', sans-serif;
     color: black;
     text-align: center;
+    height: 100%;
 }
 
 .sort-and-search-section input {
@@ -99,7 +101,7 @@ li h2 {
 }
 .card-flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .text-flex {
