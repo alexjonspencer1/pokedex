@@ -1,4 +1,4 @@
-.section-for-grid {
+main {
     display: grid;
     grid-template-columns: 1.5fr 4fr;
 }
@@ -68,20 +68,6 @@ header h1 {
     margin-bottom: 15px;
 }
 
-main {
-    width: 85%;
-    margin: 0 auto;
-}
-
-main h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.8em;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #3B4CCA;
-    text-align: center;
-}
-
 .wrapper {
     display: grid;
     grid-gap: 20px;
@@ -90,7 +76,6 @@ main h1 {
 
 li {
     height: 200px;
-    /* border: 1px solid red; */
     background: rgba(238, 238, 238, 0.801);
     border: 2px solid rgba(255, 255, 0, 0.822);
 }
@@ -103,7 +88,6 @@ li h2 {
     padding-top: 10px;
     padding-bottom: 5px;
     background: rgb(114, 114, 114);
-    /* set background to equal the color of the pokemon */
     color: white;
     font-weight: bold;
 }
@@ -121,9 +105,7 @@ li h2 {
 .text-flex {
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
     justify-content: center;
-    /* align-items: center; */
 }
 
 h3 {
@@ -144,7 +126,7 @@ p {
         height: 25%;
         width: 25%;
     }
-    .section-for-grid {
+    main {
         grid-template-columns: 1fr;
     }
   }

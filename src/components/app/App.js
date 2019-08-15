@@ -13,7 +13,9 @@ class App extends Component {
 
         const sortAndSearch = new SortAndSearch();
         const sortAndSearchDOM = sortAndSearch.renderDOM();
-        dom.appendChild(sortAndSearchDOM);
+
+        const sortAndSearchSection = dom.querySelector('.sort-and-search-here');
+        sortAndSearchSection.appendChild(sortAndSearchDOM);
 
         const props = {
             pokemon: pokemon
@@ -22,17 +24,19 @@ class App extends Component {
         const pokemonList = new PokemonList(props);
         const pokemonListDOM = pokemonList.renderDOM();
 
-        const pokeCardSection = dom.querySelector('.main-section');
-        pokeCardSection.appendChild(pokemonListDOM);
+        const pokemonSelection = dom.querySelector('.render-cards-here');
+        pokemonSelection.appendChild(pokemonListDOM);
 
     }
     
     renderHTML() {
         return /*html*/`
             <div>
-            <section class="section-for-grid">
-            </section>
                 <main class="main-section">
+                <section class="sort-and-search-here">
+                </section>
+                <section class="render-cards-here">
+                </section>
                 </main>
             </div>
         `;

@@ -5,7 +5,7 @@ class PokemonItem extends Component {
         const pokemon = this.props.pokemon;
 
         return /*html*/`
-            <li class="pokemon-card" title="${pokemon.pokemon}>
+            <li>
                 <h2>${pokemon.pokemon}</h2>
                     <div class="card-flex">
                     <img class="card-image" src="${pokemon.url_image}" alt="${pokemon.pokemon}">

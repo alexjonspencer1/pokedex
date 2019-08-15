@@ -17,8 +17,6 @@ class PokemonList extends Component {
     renderHTML() {
         return /*html*/`
             <ul class="wrapper">
-                <div class="wrapper">
-                </div>
             </ul>
         `;
     }
