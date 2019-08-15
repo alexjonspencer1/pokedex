@@ -1,3 +1,8 @@
+.section-for-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+}
+
 .page-logo {
     height: 12%;
     width: 12%;
@@ -28,7 +33,7 @@ header{
 
 header h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 5.5em;
+    font-size: 5.5rem;
     text-transform: lowercase;
     flex-grow: 1;
     margin-left: 2%;
@@ -45,20 +50,22 @@ header h1 {
 
 .sort-and-search-section input {
     height: 30px;
-    width: 300px;
+    width: 250px;
     font-family: 'Orbitron', sans-serif;
     color: rgba(204, 0, 0, 0.733);
     font-weight: bolder;
-    font-size: 1.05em;
 }
 
 .sort-and-search-section select {
     height: 30px;
-    width: 400px;
+    width: 250px;
     font-family: 'Orbitron', sans-serif;
     color: rgba(204, 0, 0, 0.733);
     font-weight: bolder;
-    font-size: 1.05em;
+}
+
+.search-bar {
+    margin-bottom: 15px;
 }
 
 main {
@@ -82,7 +89,7 @@ main h1 {
 }
 
 li {
-    height: 250px;
+    height: 200px;
     /* border: 1px solid red; */
     background: rgba(238, 238, 238, 0.801);
     border: 2px solid rgba(255, 255, 0, 0.822);
@@ -99,12 +106,11 @@ li h2 {
     /* set background to equal the color of the pokemon */
     color: white;
     font-weight: bold;
-
 }
 
 .card-image {
-    height: 45%;
-    width: 45%;
+    height: 30%;
+    width: 30%;
 
 }
 .card-flex {
@@ -117,6 +123,7 @@ li h2 {
     flex-direction: column;
     /* align-content: center; */
     justify-content: center;
+    /* align-items: center; */
 }
 
 h3 {
@@ -131,3 +138,13 @@ p {
     font-family: 'Orbitron', sans-serif;
     line-height: 1.5em;
 }
+
+@media only screen and (max-width: 650px) {
+    .card-image {
+        height: 25%;
+        width: 25%;
+    }
+    .section-for-grid {
+        grid-template-columns: 1fr;
+    }
+  }
