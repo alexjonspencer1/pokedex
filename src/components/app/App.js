@@ -2,7 +2,7 @@ import Component from '../Component.js';
 import Header from '../app/Header.js';
 import SortAndSearch from './SortAndSearch.js';
 import PokemonList from './PokemonList.js';
-import pokemon from '../../../data/pokemon-data-set.js';
+// import pokemon from '../../../data/pokemon-data-set.js';
 
 class App extends Component {
     
@@ -17,15 +17,15 @@ class App extends Component {
         const sortAndSearchSection = dom.querySelector('.sort-and-search-here');
         sortAndSearchSection.appendChild(sortAndSearchDOM);
 
-        const props = {
-            pokemon: pokemon
-        };
-
-        const pokemonList = new PokemonList(props);
-        const pokemonListDOM = pokemonList.renderDOM();
-
-        const pokemonSelection = dom.querySelector('.render-cards-here');
-        pokemonSelection.appendChild(pokemonListDOM);
+        const url = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const pokemonList = new PokemonList({ pokemon: data });
+                const pokemonListDOM = pokemonList.renderDOM();
+                const pokemonSelection = dom.querySelector('.render-cards-here');
+                pokemonSelection.appendChild(pokemonListDOM);
+            });
 
     }
     
