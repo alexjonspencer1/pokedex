@@ -24,37 +24,18 @@ class App extends Component {
         const paging = new Paging();
         pokeCardSection.appendChild(paging.renderDOM());
 
-        // const pokemonList = new PokemonList({ pokemon: [] });
-        // pokeCardSection.appendChild(pokemonList.renderDOM());
-
-
-//         function loadPokemon() {
-//             const options = hashStorage.get();
-//             getPokemon(options)
-//                 .then(data => {
-//                     const pokeList = new PokeList({ pokemons: data });
-//                     const pokeListDOM = pokeList.renderDOM();
-//                     const pokeCards = dom.querySelector('#pokecards');
-//                     pokeCards.appendChild(pokeListDOM);
-//                     const totalCount = data.count;
-//                     paging.update({
-//                         totalCount: totalCount,
-//                         currentPage: +options.page
-//                     });
-//                 });
-//         }
-//         loadPokemon();
+        const pokemonList = new PokemonList({ pokemon: [] });
+        pokeCardSection.appendChild(pokemonList.renderDOM());
 
         function loadCards() {
             const options = hashStorage.get();
             getPokedexAPI(options)
                 .then(data => {
-                    const pokemonList = new PokemonList({ pokemon: data });
-                    console.log(pokemonList);
-                    const pokemonListDOM = pokemonList.renderDOM();
-                    const pokemonSelection = dom.querySelector('.render-cards-here');
-                    pokemonSelection.appendChild(pokemonListDOM);
+                    const pokemon = data.results;
+                    console.log(pokemon);
                     const totalCount = data.count;
+
+                    pokemonList.update({ pokemon: pokemon });
                     paging.update({
                         totalCount: totalCount,
                         currentPage: +options.page
@@ -105,3 +86,20 @@ export default App;
 //         const pokemonSelection = dom.querySelector('.render-cards-here');
 //         pokemonSelection.appendChild(pokemonListDOM);
 //     });
+
+// function loadPokemon() {
+    //             const options = hashStorage.get();
+    //             getPokemon(options)
+    //                 .then(data => {
+    //                     const pokeList = new PokeList({ pokemons: data });
+    //                     const pokeListDOM = pokeList.renderDOM();
+    //                     const pokeCards = dom.querySelector('#pokecards');
+    //                     pokeCards.appendChild(pokeListDOM);
+    //                     const totalCount = data.count;
+    //                     paging.update({
+    //                         totalCount: totalCount,
+    //                         currentPage: +options.page
+    //                     });
+    //                 });
+    //         }
+    //         loadPokemon();
