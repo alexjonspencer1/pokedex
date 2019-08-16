@@ -30,8 +30,12 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: #3B4CCA;
+    /* background: #3B4CCA; */
     padding: 20px 0px 20px 0px;
+    background-image: url("../assets/Screen Shot 2019-08-16 at 7.36.18 AM.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 60%;
 }
 
 .header-span {
@@ -49,7 +53,8 @@ header h1 {
     /* text-transform: lowercase; */
     flex-grow: 1;
     margin-left: 2%;
-    color: white;
+    color: #CC0000;
+    margin-top: 35px;
 }
 
 .sort-and-search-section {
