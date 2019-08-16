@@ -63,7 +63,7 @@ header h1 {
 }
 
 .sort-and-search-section {
-    background-image: url("../assets/pokeball-clipart-2.png");
+    /* background-image: url("../assets/pokeball-clipart-2.png"); */
     background-size: 700px;
     background-repeat: no-repeat; 
     background-position: 0% 15%;

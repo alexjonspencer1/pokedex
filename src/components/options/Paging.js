@@ -3,7 +3,6 @@ import hashStorage from '../../services/hash-storage.js';
 
 class Paging extends Component {
 
-
     onRender(dom) {
         const prevButton = dom.querySelector('.prev-button');
         const nextButton = dom.querySelector('.next-button');

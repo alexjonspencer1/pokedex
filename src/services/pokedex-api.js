@@ -12,7 +12,7 @@ export function getPokedexAPI(options) {
 
         .then(results => {
             return {
-                count: 50 * page,
+                count: 100 * page,
                 results: results
             };
         });
