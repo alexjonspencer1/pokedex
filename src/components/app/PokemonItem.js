@@ -5,14 +5,14 @@ class PokemonItem extends Component {
         const pokemon = this.props.pokemon;
 
         return /*html*/`
-            <li style="border: 4px solid ${pokemon.color_1};">
+            <li>
                 <h2>${pokemon.pokemon}</h2>
                     <div class="card-flex">
                     <img class="card-image" src="${pokemon.url_image}" alt="${pokemon.pokemon}">
                         <div class="text-flex">
                             <h3>Info:</h3>
-                            <p>Type 1: ${pokemon.type_1}</p>
-                            <p>Type 2: ${pokemon.type_2}</p>
+                            <p style="text-transform: capitalize; color: ${pokemon.color_1}">Type 1: ${pokemon.type_1}</p>
+                            <p style="text-transform: capitalize; color: ${pokemon.color_2}">Type 2: ${pokemon.type_2}</p>
                             <p>Attack: ${pokemon.attack}</p>
                             <p>Defense: ${pokemon.defense}</p>
                         </div>

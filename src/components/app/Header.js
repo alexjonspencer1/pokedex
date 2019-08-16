@@ -5,7 +5,7 @@ class Header extends Component {
         return /*html*/`
             <header>
                 <img class="page-logo" src="assets/pokeball.png" alt="pokeball-logo">
-                <h1>Pokedex<span class="header-span"> gotta catch 'em all!</span></h1>
+                <h1>Pokédex<span class="header-span"> ... gotta catch 'em all!</span></h1>
             </header>
         `;
     }
