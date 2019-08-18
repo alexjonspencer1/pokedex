@@ -29,10 +29,11 @@ class App extends Component {
 
         function loadCards() {
             const options = hashStorage.get();
+            // console.log(options);
             getPokedexAPI(options)
                 .then(data => {
                     const pokemon = data.results;
-                    console.log(pokemon);
+                    // console.log(pokemon);
                     const totalCount = data.count;
 
                     pokemonList.update({ pokemon: pokemon });
@@ -43,7 +44,7 @@ class App extends Component {
                 });
         }
 
-        (loadCards());
+        loadCards();
 
         window.addEventListener('hashchange', () => {
             loadCards();
