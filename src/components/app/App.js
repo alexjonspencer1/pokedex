@@ -22,12 +22,13 @@ class App extends Component {
         // const sortAndSearchDOM = sortAndSearch.renderDOM();
         // sortAndSearchSection.appendChild(sortAndSearchDOM);
 
-        const pokeCardSection = dom.querySelector('.render-cards-here');
+        const pagingSection = dom.querySelector('.paging');
         const paging = new Paging();
         const pagingDOM = paging.renderDOM();
-        pokeCardSection.appendChild(pagingDOM);
+        pagingSection.appendChild(pagingDOM);
 
-        const pokemonList = new PokemonList({ pokemon: [] });
+        const pokemonList = new PokemonList({ pokemons: [] });
+        const pokeCardSection = dom.querySelector('.render-cards-here');
         const pokemonListDOM = pokemonList.renderDOM();
         pokeCardSection.appendChild(pokemonListDOM);
 
@@ -35,11 +36,10 @@ class App extends Component {
             const options = hashStorage.get();
             getPokedexAPI(options)
                 .then(data => {
-                    const pokemon = data.results;
-                    // console.log(pokemon);
+                    const pokepoke = data.results;
                     const totalCount = data.count;
 
-                    pokemonList.update({ pokemon: pokemon });
+                    pokemonList.update({ pokemon: pokepoke });
                     paging.update({
                         totalCount: totalCount,
                         currentPage: +options.page
@@ -58,10 +58,12 @@ class App extends Component {
         return /*html*/`
             <div>
                 <main class="main-section">
-                <section class="sort-and-search-here">
-                </section>
-                <section class="render-cards-here">
-                </section>
+                    <section class="sort-and-search-here">
+                    </section>
+                    <section class="paging">
+                    </section>
+                    <section class="render-cards-here">
+                    </section>
                 </main>
             </div>
         `;
