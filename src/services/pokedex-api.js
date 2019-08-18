@@ -1,5 +1,5 @@
 
-const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
+const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex/';
 
 export function getPokedexAPI(options) {
 
@@ -9,14 +9,14 @@ export function getPokedexAPI(options) {
     const url = `${URL}?page=${page || 1}&search=${search || ''}`;
 
     return fetch(url)
-        .then(response => response.json())
+        .then(response => response.json());
 
-        .then(data => {
-            return {
-                count: 100 * page,
-                data: data
-            };
-        });
+        // .then(results => {
+        //     return {
+        //         count: 20 * page,
+        //         results: results
+        //     };
+        // });
 }
 
 
