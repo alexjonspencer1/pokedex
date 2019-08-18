@@ -76,6 +76,12 @@ header h1 {
     min-width: 330px;
 }
 
+.search-bar-flex {
+    display: flex;
+    /* align-items-center; */
+    justify-content: space-between;
+}
+
 .sort-and-search-section input {
     width: 250px;
     font-family: 'Oswald', sans-serif;
@@ -97,6 +103,7 @@ header h1 {
 .search-bar {
     margin-bottom: 15px;
 }
+
 
 .wrapper {
     display: grid;

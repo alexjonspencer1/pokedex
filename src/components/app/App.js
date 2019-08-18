@@ -1,10 +1,11 @@
 import Component from '../Component.js';
 import Header from '../app/Header.js';
 import PokemonList from './PokemonList.js';
-import SortAndSearch from './SortAndSearch.js';
+// import SortAndSearch from './SortAndSearch.js';
 import Paging from '../options/Paging.js';
 import { getPokedexAPI } from '../../services/pokedex-api.js';
 import hashStorage from '../../services/hash-storage.js';
+import Search from '../options/Search.js';
 
 class App extends Component {
     
@@ -13,23 +14,25 @@ class App extends Component {
         const headerDOM = header.renderDOM();
         dom.prepend(headerDOM);
 
-        const sortAndSearch = new SortAndSearch();
-        const sortAndSearchDOM = sortAndSearch.renderDOM();
-
         const sortAndSearchSection = dom.querySelector('.sort-and-search-here');
-        sortAndSearchSection.appendChild(sortAndSearchDOM);
+        const search = new Search();
+        sortAndSearchSection.appendChild(search.renderDOM());
+        
+        // const sortAndSearch = new SortAndSearch();
+        // const sortAndSearchDOM = sortAndSearch.renderDOM();
+        // sortAndSearchSection.appendChild(sortAndSearchDOM);
 
         const pokeCardSection = dom.querySelector('.render-cards-here');
-
         const paging = new Paging();
-        pokeCardSection.appendChild(paging.renderDOM());
+        const pagingDOM = paging.renderDOM();
+        pokeCardSection.appendChild(pagingDOM);
 
         const pokemonList = new PokemonList({ pokemon: [] });
-        pokeCardSection.appendChild(pokemonList.renderDOM());
+        const pokemonListDOM = pokemonList.renderDOM();
+        pokeCardSection.appendChild(pokemonListDOM);
 
         function loadCards() {
             const options = hashStorage.get();
-            // console.log(options);
             getPokedexAPI(options)
                 .then(data => {
                     const pokemon = data.results;
