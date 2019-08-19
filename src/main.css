@@ -11,7 +11,8 @@ main {
 
 .paging {
     grid-area: paging;
-    height: 2px;
+    /* height: 2px; */
+    /* margin-top: 20px; */
 }
 
 .sort-and-search-here {
@@ -91,6 +92,7 @@ header h1 {
 
 .render-cards-here {
     grid-area: render-cards-here;
+    /* margin-top: 20px; */
 }
 
 .search-bar-flex {
