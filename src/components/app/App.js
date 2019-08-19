@@ -29,11 +29,9 @@ class App extends Component {
 
         function loadPokemon() {
             const options = hashStorage.get();
-            // console.log(options);
             getPokedexAPI(options)
                 .then(data => {
                     const pokepoke = data.results;
-                    // console.log(data);  
                     const totalCount = data.results.count;
 
                     pokemonList.update({ pokemons: pokepoke });
@@ -68,41 +66,3 @@ class App extends Component {
 }
 
 export default App;
-
-
- // const pokemonListDOM = pokemonList.renderDOM();
-        // const pokemonSelection = dom.querySelector('.render-cards-here');
-        // pokemonSelection.appendChild(pokemonListDOM);
-
-            // const pokemonList = new PokemonList({ pokemon: data });
-//         const pokemonListDOM = pokemonList.renderDOM();
-//         const pokemonSelection = dom.querySelector('.render-cards-here');
-//         pokemonSelection.appendChild(pokemonListDOM);
-//     });
-
-// const url = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
-// fetch(url)
-//     .then(response => response.json())
-//     .then(data => {
-//         const pokemonList = new PokemonList({ pokemon: data });
-//         const pokemonListDOM = pokemonList.renderDOM();
-//         const pokemonSelection = dom.querySelector('.render-cards-here');
-//         pokemonSelection.appendChild(pokemonListDOM);
-//     });
-
-// function loadPokemon() {
-    //             const options = hashStorage.get();
-    //             getPokemon(options)
-    //                 .then(data => {
-    //                     const pokeList = new PokeList({ pokemons: data });
-    //                     const pokeListDOM = pokeList.renderDOM();
-    //                     const pokeCards = dom.querySelector('#pokecards');
-    //                     pokeCards.appendChild(pokeListDOM);
-    //                     const totalCount = data.count;
-    //                     paging.update({
-    //                         totalCount: totalCount,
-    //                         currentPage: +options.page
-    //                     });
-    //                 });
-    //         }
-    //         loadPokemon();

@@ -5,13 +5,11 @@ class PokemonList extends Component {
     
     onRender(dom) {
         const pokemons = this.props.pokemons;
-        // console.log(pokemons);
         
         if(pokemons.results) {
 
             pokemons.results.forEach(element => { 
                 const props = { pokemons: element };
-                // console.log(props);
                 const pokemonItemVariable = new PokemonItem(props);
                 const pokemonItemDOM = pokemonItemVariable.renderDOM();
                 dom.appendChild(pokemonItemDOM);
@@ -28,6 +26,3 @@ class PokemonList extends Component {
 }
 
 export default PokemonList;
-
-// Object.keys(pokemon).forEach(function(key) { 
-//     const props = { pokemon: key };

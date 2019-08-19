@@ -17,10 +17,3 @@ export function getPokedexAPI(options) {
             };
         });
 }
-
-
-// .then(data => {
-//     const pokemonList = new PokemonList({ pokemon: data });
-//     const pokemonListDOM = pokemonList.renderDOM();
-//     const pokemonSelection = dom.querySelector('.render-cards-here');
-//     pokemonSelection.appendChild(pokemonListDOM);
