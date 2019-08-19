@@ -16,11 +16,7 @@ class App extends Component {
         const sortAndSearchSection = dom.querySelector('.sort-and-search-here');
         const search = new Search();
         sortAndSearchSection.appendChild(search.renderDOM());
-        
-        // const sortAndSearch = new SortAndSearch();
-        // const sortAndSearchDOM = sortAndSearch.renderDOM();
-        // sortAndSearchSection.appendChild(sortAndSearchDOM);
-
+    
         const pagingSection = dom.querySelector('.paging');
         const paging = new Paging();
         const pagingDOM = paging.renderDOM();
@@ -33,12 +29,12 @@ class App extends Component {
 
         function loadPokemon() {
             const options = hashStorage.get();
-            console.log(options);
+            // console.log(options);
             getPokedexAPI(options)
                 .then(data => {
                     const pokepoke = data.results;
-                    // console.log(pokepoke);  
-                    const totalCount = data.count;
+                    // console.log(data);  
+                    const totalCount = data.results.count;
 
                     pokemonList.update({ pokemons: pokepoke });
                     paging.update({

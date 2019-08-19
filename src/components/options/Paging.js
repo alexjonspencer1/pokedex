@@ -4,14 +4,15 @@ import hashStorage from '../../services/hash-storage.js';
 class Paging extends Component {
 
     onRender(dom) {
-        const prevButton = dom.querySelector('.prev-button');
-        const nextButton = dom.querySelector('.next-button');
+        const prevButton = dom.querySelector('.prev');
+        const nextButton = dom.querySelector('.next');
 
         if(!prevButton) {
             return;
         }
 
         const currentPage = this.props.currentPage || 1;
+        console.log(currentPage);
         
         function updatePage(increment) {
             hashStorage.set({ page: currentPage + increment });
@@ -32,6 +33,7 @@ class Paging extends Component {
         const currentPage = this.props.currentPage || 1;
         const perPage = 20;
         const totalCount = this.props.totalCount;
+        console.log("total count", totalCount);
 
         if(!totalCount) {
             return /*html*/`

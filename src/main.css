@@ -3,6 +3,19 @@ main {
     grid-template-columns: 1.5fr 4fr;
     grid-gap: 20px;
     padding: 10px 10px 0px 10px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "sort-and-search-here paging"
+        "sort-and-search-here render-cards-here";
+}
+
+.paging {
+    grid-area: paging;
+    height: 2px;
+}
+
+.sort-and-search-here {
+    grid-area: sort-and-search-here;
 }
 
 .page-logo {
@@ -63,7 +76,7 @@ header h1 {
 }
 
 .sort-and-search-section {
-    /* background-image: url("../assets/pokeball-clipart-2.png"); */
+    background-image: url("../assets/pokeball-clipart-2.png");
     background-size: 700px;
     background-repeat: no-repeat; 
     background-position: 0% 15%;
@@ -74,6 +87,10 @@ header h1 {
     text-align: center;
     height: 100%;
     min-width: 330px;
+}
+
+.render-cards-here {
+    grid-area: render-cards-here;
 }
 
 .search-bar-flex {
@@ -178,6 +195,10 @@ p {
     }
     main {
         grid-template-columns: 1fr;
+        grid-template-areas: 
+            "sort-and-search-here"
+            "paging"
+            "render-cards-here";
     }
     .card-flex {
         display: flex;
