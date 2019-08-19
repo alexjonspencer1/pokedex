@@ -28,7 +28,7 @@ class Search extends Component {
             <form class="sort-and-search-section">
                 <div class="search-bar-flex">
                     Search: <input class="search-bar" name="search" value="${search}"><br>
-                    <button class="search-button">Search</button>
+                    <button class="search-button"><img class="search-icon" src="../assets/pokeball.png">Fetch!</button>
                 </div><br>
                 Sort: <select class="sort">
                         <option selected disabled>Please select your option!</option>

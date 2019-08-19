@@ -11,6 +11,27 @@ main {
 
 .paging {
     grid-area: paging;
+    font-family: 'Oswald', sans-serif;
+}
+
+.search-icon {
+    height: 50%;
+    width: 50%;
+    border-radius: 100%;
+    transition: all .3s ease-in-out
+}
+
+.search-button {
+    /* border-radius: 100%; */
+    background: none;
+    border: 0px solid black;
+    width: 70px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    
 }
 
 .sort-and-search-here {
@@ -69,7 +90,7 @@ header h1 {
 }
 
 .sort-and-search-section {
-    background-image: url("../assets/pokeball-clipart-2.png");
+    /* background-image: url("../assets/pokeball-clipart-2.png"); */
     background-size: 700px;
     background-repeat: no-repeat; 
     background-position: 0% 15%;
@@ -88,7 +109,8 @@ header h1 {
 
 .search-bar-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .sort-and-search-section input {
@@ -104,7 +126,7 @@ header h1 {
 }
 
 .search-bar {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 
@@ -118,6 +140,7 @@ li {
     height: 200px;
     border-radius: 5px;
     transition: all .2s ease-in-out;
+    background-image: url("../assets/card background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     border: 1px solid #eee;
@@ -142,8 +165,8 @@ li h2 {
 }
 
 .card-image {
-    height: 40%;
-    width: 40%;
+    height: 60%;
+    width: 60%;
 
 }
 .card-flex {
@@ -192,7 +215,7 @@ p {
         display: none;
     }
     .sort-and-search-section {
-        background-image: url("../assets/pokeball-clipart-2.png");
+        /* background-image: url("../assets/pokeball-clipart-2.png"); */
         background-size: 700px;
         background-repeat: no-repeat; 
         background-position: 0% 15%;
