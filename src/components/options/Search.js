@@ -4,7 +4,7 @@ import hashStorage from '../../services/hash-storage.js';
 class Search extends Component {
 
     onRender(form) {
-        form.addEventListener('sumbit', event => {
+        form.addEventListener('submit', event => {
             event.preventDefault();
             const formData = new FormData(form);
             const search = formData.get('search');

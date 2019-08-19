@@ -1,7 +1,6 @@
 import Component from '../Component.js';
 import Header from '../app/Header.js';
 import PokemonList from './PokemonList.js';
-// import SortAndSearch from './SortAndSearch.js';
 import Paging from '../options/Paging.js';
 import { getPokedexAPI } from '../../services/pokedex-api.js';
 import hashStorage from '../../services/hash-storage.js';
@@ -27,19 +26,21 @@ class App extends Component {
         const pagingDOM = paging.renderDOM();
         pagingSection.appendChild(pagingDOM);
 
-        const pokemonList = new PokemonList({ pokemons: [] });
         const pokeCardSection = dom.querySelector('.render-cards-here');
+        const pokemonList = new PokemonList({ pokemons: [] });
         const pokemonListDOM = pokemonList.renderDOM();
         pokeCardSection.appendChild(pokemonListDOM);
 
-        function loadCards() {
+        function loadPokemon() {
             const options = hashStorage.get();
+            console.log(options);
             getPokedexAPI(options)
                 .then(data => {
                     const pokepoke = data.results;
+                    // console.log(pokepoke);  
                     const totalCount = data.count;
 
-                    pokemonList.update({ pokemon: pokepoke });
+                    pokemonList.update({ pokemons: pokepoke });
                     paging.update({
                         totalCount: totalCount,
                         currentPage: +options.page
@@ -47,10 +48,10 @@ class App extends Component {
                 });
         }
 
-        loadCards();
+        loadPokemon();
 
         window.addEventListener('hashchange', () => {
-            loadCards();
+            loadPokemon();
         });
     }
     

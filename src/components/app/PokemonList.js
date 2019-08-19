@@ -7,12 +7,16 @@ class PokemonList extends Component {
         const pokemons = this.props.pokemons;
         // console.log(pokemons);
         
-        pokemons.forEach(element => { 
-            const props = { pokemons: element };
-            const pokemonItemVariable = new PokemonItem(props);
-            const pokemonItemDOM = pokemonItemVariable.renderDOM();
-            dom.appendChild(pokemonItemDOM);
-        });
+        if(pokemons.results) {
+
+            pokemons.results.forEach(element => { 
+                const props = { pokemons: element };
+                // console.log(props);
+                const pokemonItemVariable = new PokemonItem(props);
+                const pokemonItemDOM = pokemonItemVariable.renderDOM();
+                dom.appendChild(pokemonItemDOM);
+            });
+        }
     }
     
     renderHTML() {
