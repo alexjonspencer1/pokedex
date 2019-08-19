@@ -1,7 +1,7 @@
 main {
     display: grid;
     grid-template-columns: 1.5fr 4fr;
-    grid-gap: 25px;
+    grid-gap: 15px;
     padding: 10px 10px 0px 10px;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -166,6 +166,7 @@ li {
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
     border-left: 1px solid #eee;
+    margin-right: 10px;
 }
 
 li:hover {
@@ -211,6 +212,7 @@ p {
     }
     main {
         grid-template-columns: 1fr;
+        margin-right: 10px;
         grid-template-areas: 
             "sort-and-search-here"
             "paging"
@@ -219,7 +221,7 @@ p {
     .card-flex {
         display: flex;
         justify-content: space-around;
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
     .header-span {
         display: none;
