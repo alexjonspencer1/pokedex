@@ -91,11 +91,11 @@ header h1 {
 }
 
 .sort-and-search-section {
-    background-image: url("../assets/search background.jpeg");
+    background-image: url("../assets/pokemon collage.jpg");
     /* background-size: 700px; */
-    background-size: cover;
-    background-repeat: no-repeat; 
-    /* background-position: 0% 15%; */
+    /* background-size: contain; */
+    /* background-repeat: repeat;  */
+    /* background-position: top 85%; */
     border: 1px solid #eee;
     padding: 15px;
     font-family: 'Oswald', sans-serif;
@@ -194,15 +194,14 @@ li:hover {
 h3 {
     font-weight: bolder;
     font-family: 'Changa', sans-serif;
-
-    line-height: 1.5em;
+    /* line-height: 1.5em; */
     text-transform: uppercase;
     text-decoration: underline;
 }
 
 p {
     font-family: 'Changa', sans-serif;
-    line-height: 1.5em;
+    /* line-height: 1.5em; */
 }
 
 @media only screen and (max-width: 650px) {

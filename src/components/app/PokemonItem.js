@@ -15,6 +15,8 @@ class PokemonItem extends Component {
                             <p style="text-transform: capitalize; color: ${pokemons.color_2}">Type 2: ${pokemons.type_2}</p>
                             <p>Attack: ${pokemons.attack}</p>
                             <p>Defense: ${pokemons.defense}</p>
+                            <p>Speed: ${pokemons.speed}</p>
+                            <p>HP: ${pokemons.hp}</p>
                         </div>
                     </div>
             </li>
