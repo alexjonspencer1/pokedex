@@ -1,0 +1,235 @@
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+    grid-gap: 15px;
+    padding: 10px 10px 0px 10px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "sort-and-search-here paging"
+        "sort-and-search-here render-cards-here";
+}
+
+.paging {
+    grid-area: paging;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 12px;
+}
+
+.search-icon {
+    height: 50%;
+    width: 50%;
+    border-radius: 100%;
+    transition: all .3s ease-in-out
+}
+
+.search-button {
+    /* border-radius: 100%; */
+    background: none;
+    border: 0px solid black;
+    width: 70px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    
+}
+
+.sort-and-search-here {
+    grid-area: sort-and-search-here;
+}
+
+.page-logo {
+    height: 8%;
+    width: 8%;
+    min-width: 70px;
+    opacity: 0.9;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    transition: all .5s ease-in-out;
+}
+
+.page-logo:hover {
+    height: 10%;
+    width: 10%;
+    opacity: 0.8;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    transform: rotate(1800deg);
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    background-image: url("../assets/Screen Shot 2019-08-16 at 7.36.18 AM.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 80%;
+}
+
+.header-span {
+    font-size: 0.4em;
+    font-family: 'Kaushan Script', cursive;
+    color: #FFDE00;
+    margin-left: 10px;
+
+}
+
+header h1 {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Changa', sans-serif;
+    font-size: 4.8em;
+    flex-grow: 1;
+    margin-left: 2%;
+    color: #CC0000;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.sort-and-search-section {
+    background-image: url("../assets/pokemon collage.jpg");
+    /* background-size: 700px; */
+    /* background-size: contain; */
+    /* background-repeat: repeat;  */
+    /* background-position: top 85%; */
+    border: 1px solid #eee;
+    padding: 15px;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    text-align: center;
+    height: 100%;
+    min-width: 330px;
+}
+
+.render-cards-here {
+    grid-area: render-cards-here;
+}
+
+.search-bar-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sort-and-search-section input {
+    width: 250px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.01em;
+}
+
+.sort-and-search-section select {
+    width: 250px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.01em;
+}
+
+.search-bar {
+    /* margin-bottom: 15px; */
+}
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+li h2 {
+    background: white(114, 114, 114);
+    text-align: left;
+    font-family: 'Kaushan Script', cursive;
+    /* margin-bottom: 5px; */
+    font-size: 2em;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    color: black;
+    /* font-style: italic; */
+    font-weight: bold;
+    border-radius: 2px;
+    text-transform: capitalize;
+    margin-top: 5px;
+    margin-left: 5px;
+    /* width: 95%; */
+}
+
+li {
+    height: 200px;
+    /* border-radius: 5px; */
+    transition: all .2s ease-in-out;
+    /* background-image: url("../assets/card background.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    margin-right: 10px;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+
+
+.card-image {
+    height: 50%;
+    width: 50%;
+
+}
+.card-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3 {
+    font-weight: bolder;
+    font-family: 'Changa', sans-serif;
+    /* line-height: 1.5em; */
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+p {
+    font-family: 'Changa', sans-serif;
+    /* line-height: 1.5em; */
+}
+
+@media only screen and (max-width: 650px) {
+    .card-image {
+        height: 35%;
+        width: 35%;
+    }
+    main {
+        grid-template-columns: 1fr;
+        margin-right: 10px;
+        grid-template-areas: 
+            "sort-and-search-here"
+            "paging"
+            "render-cards-here";
+    }
+    .card-flex {
+        display: flex;
+        justify-content: space-around;
+        /* margin-top: 15px; */
+    }
+    .header-span {
+        display: none;
+    }
+    .sort-and-search-section {
+        /* background-image: url("../assets/pokeball-clipart-2.png"); */
+        background-size: 700px;
+        background-repeat: no-repeat; 
+        background-position: 0% 15%;
+        background-position: -70% 15%;
+    }
+  }
